@@ -7,7 +7,7 @@ interface ThemeState {
 }
 
 const initialState: ThemeState = {
-  mode: "dark",
+  mode: "light",
   // mode:
   //   (typeof window !== undefined &&
   //     JSON.parse(window.localStorage.getItem("theme")!)) ||

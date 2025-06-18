@@ -38,8 +38,10 @@ const Action = () => {
     const filterTodo = todos.find((todo) => todo.title === title);
 
     if (filterTodo) {
-      setIsDuplicate(true);
-      return;
+      if (!isEdited) {
+        setIsDuplicate(true);
+        return;
+      }
     }
 
     setFormData({

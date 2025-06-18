@@ -57,10 +57,6 @@ mada-todolist/
 
 Contributions are welcome! Please open an issue or submit a pull request.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
 ## Author
 
-- [Your Name](https://github.com/your-username)
+- [Jayash Basnet](https://github.com/jayash101)

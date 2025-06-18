@@ -1,4 +1,4 @@
-# Mada TodoList
+# MADA TodoList
 
 A simple and efficient Todo List application built to help users manage their daily tasks with ease.
 

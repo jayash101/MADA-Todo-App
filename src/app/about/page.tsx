@@ -31,7 +31,7 @@ const About = () => {
       <article className="flex flex-col items-center gap-16">
         <h2 className="text-4xl font-medium text-center">Core Features</h2>
 
-        <section className="grid grid-cols-4 gap-6 px-16">
+        <section className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:px-16">
           {FEATURES &&
             FEATURES.length > 0 &&
             FEATURES.map((feature: FeatureProps) => (

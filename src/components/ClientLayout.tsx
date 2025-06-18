@@ -28,7 +28,7 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
     }
   }, [dispatch]);
 
-  if (!mounted) return null;
+  // if (!mounted) return null;
 
   return (
     <>

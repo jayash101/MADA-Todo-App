@@ -28,7 +28,7 @@ npm install
 ### Running the App
 
 ```bash
-npm start
+npm run dev
 ```
 
 The app will be available at `http://localhost:3000`.

@@ -43,7 +43,11 @@ const Home = () => {
 
   return (
     <section className="px-4 pt-2 flex flex-col gap-8">
-      <h1 className="text-4xl font-bold uppercase tracking-wide">All Tasks</h1>
+      <h1 className="text-4xl font-bold uppercase tracking-wide">
+        {activeTab === "all" && "All Tasks"}
+        {activeTab === "progress" && "In Progress"}
+        {activeTab === "completed" && "Completed"}
+      </h1>
 
       <section className="flex flex-col lg:flex-row gap-16">
         <Action />

@@ -7,7 +7,7 @@ const List = ({ data }: { data: Record<string, string | boolean>[] }) => {
   return (
     <section
       className={
-        "p-2 grid grid-cols-3 gap-8 lg:max-h-[60vh] overflow-x-hidden overflow-y-auto"
+        "p-2 grid grid-cols-1 place-items-center lg:place-items-start lg:grid-cols-3 gap-8 lg:max-h-[60vh] overflow-x-hidden overflow-y-auto"
       }
     >
       {data &&

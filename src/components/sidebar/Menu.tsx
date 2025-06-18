@@ -21,7 +21,7 @@ const Menu = () => {
   };
 
   return (
-    <ul className="flex flex-col gap-4">
+    <ul className="grid grid-cols-3 lg:flex lg:flex-col gap-3">
       {MENU &&
         MENU.length > 0 &&
         MENU.map((item: Menu) => (
@@ -31,7 +31,7 @@ const Menu = () => {
               currentTab === item.slug
                 ? "dark:bg-gray-600 bg-slate-600 text-white"
                 : ""
-            } cursor-pointer dark:bg-black bg-gray-100 dark:text-white text-black hover:brightness-125 py-3 rounded`}
+            } cursor-pointer dark:bg-black bg-gray-100 dark:text-white text-black hover:brightness-125 py-6 lg:py-3 rounded`}
             onClick={() => handleCurrentTab(item.slug)}
           >
             {item.text}

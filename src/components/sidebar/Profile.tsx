@@ -5,7 +5,7 @@ import React from "react";
 
 const Profile = () => {
   return (
-    <section className="flex flex-col items-center gap-4">
+    <section className="hidden lg:flex flex-col items-center gap-4">
       <figure className="relative h-24 w-24">
         <Image src={"/globe.svg"} alt="user-image" fill={true} />
       </figure>

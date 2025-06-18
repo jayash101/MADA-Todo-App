@@ -5,8 +5,8 @@ import React from "react";
 
 const Info = () => {
   return (
-    <section className="absolute font-medium bottom-8 right-6 flex gap-2 dark:text-white text-black">
-      <span>Created by</span>
+    <section className="lg:absolute mx-auto font-medium bottom-8 right-6 flex gap-2 dark:text-white text-black">
+      <span className="mb-8 lg:mb-0">Created by</span>
 
       <Link
         href={"https://github.com/jayash101"}

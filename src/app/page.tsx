@@ -45,7 +45,7 @@ const Home = () => {
     <section className="px-4 pt-2 flex flex-col gap-8">
       <h1 className="text-4xl font-bold uppercase tracking-wide">All Tasks</h1>
 
-      <section className="flex gap-16">
+      <section className="flex flex-col lg:flex-row gap-16">
         <Action />
 
         <List data={data} />

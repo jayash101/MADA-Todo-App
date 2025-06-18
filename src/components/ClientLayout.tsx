@@ -27,7 +27,7 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
     <>
       <Nav />
 
-      <section className="flex gap-4">
+      <section className="flex flex-col lg:flex-row gap-4">
         <Side />
         {children}
       </section>

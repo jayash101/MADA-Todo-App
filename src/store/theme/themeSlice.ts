@@ -1,3 +1,5 @@
+"use client";
+
 import { createSlice } from "@reduxjs/toolkit";
 
 interface ThemeState {
@@ -5,24 +7,34 @@ interface ThemeState {
 }
 
 const initialState: ThemeState = {
-  mode: JSON.parse(localStorage.getItem("theme")!) || "light",
+  mode: "dark",
+  // mode:
+  //   (typeof window !== undefined &&
+  //     JSON.parse(window.localStorage.getItem("theme")!)) ||
+  //   "light",
 };
 
 const themeSlice = createSlice({
   name: "theme",
   initialState,
   reducers: {
+    initializeTheme: (state, action) => {
+      state.mode = action.payload;
+    },
+
     toggleMode: (state) => {
       state.mode = state.mode === "light" ? "dark" : "light";
+
       localStorage.setItem("theme", JSON.stringify(state.mode));
     },
 
     setMode: (state, action) => {
       state.mode = action.payload;
+
       localStorage.setItem("theme", JSON.stringify(state.mode));
     },
   },
 });
 
-export const { toggleMode, setMode } = themeSlice.actions;
+export const { toggleMode, setMode, initializeTheme } = themeSlice.actions;
 export const themeReducer = themeSlice.reducer;

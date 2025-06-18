@@ -2,12 +2,15 @@
 import Action from "@/components/home/action/Action";
 import List from "@/components/home/list/List";
 import Info from "@/components/home/Info";
-import { useAppSelector } from "@/store/hooks";
+import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import React, { useEffect, useState } from "react";
+import { initializeTodos } from "@/store/todos/todoSlice";
 
 const Home = () => {
   const { todos, activeTab } = useAppSelector((state) => state.todos);
   const [data, setData] = useState([{}]);
+
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     if (!todos) {
@@ -30,6 +33,13 @@ const Home = () => {
       if (completeData) setData(completeData);
     }
   }, [todos, activeTab]);
+
+  useEffect(() => {
+    const stored = localStorage.getItem("todos");
+    if (stored) {
+      dispatch(initializeTodos(JSON.parse(stored)));
+    }
+  }, [dispatch]);
 
   return (
     <section className="px-4 pt-2 flex flex-col gap-8">

@@ -1,3 +1,5 @@
+"use client";
+
 import { createSlice } from "@reduxjs/toolkit";
 
 interface TodoState {
@@ -8,7 +10,7 @@ interface TodoState {
 }
 
 const initialState: TodoState = {
-  todos: JSON.parse(localStorage.getItem("todos")!),
+  todos: [],
 
   currentTodo: {},
 
@@ -20,6 +22,10 @@ const todoSlice = createSlice({
   name: "todos",
   initialState,
   reducers: {
+    initializeTodos: (state, action) => {
+      state.todos = action.payload;
+    },
+
     saveTodos: (state, action) => {
       const todoList = [...state.todos, action.payload];
       localStorage.setItem("todos", JSON.stringify(todoList));
@@ -97,6 +103,7 @@ export const {
   fetchCurrentTodo,
   toggleCompleted,
   updateActiveTab,
+  initializeTodos,
 } = todoSlice.actions;
 
 export const todoReducer = todoSlice.reducer;

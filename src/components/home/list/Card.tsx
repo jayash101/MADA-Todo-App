@@ -46,6 +46,7 @@ const Card = ({ title, description, datePosted, isCompleted }: CardProps) => {
     <section
       className={`
         ${isCompleted ? "outline-4 outline-green-500" : ""}
+        ${!title && !description ? "hidden" : ""}
         dark:bg-gray-400 bg-black dark:text-black text-white rounded w-60 p-6 flex flex-col gap-6 h-[30vh]
     
     `}

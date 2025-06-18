@@ -5,7 +5,11 @@ import Card from "./Card";
 
 const List = ({ data }: { data: Record<string, string | boolean>[] }) => {
   return (
-    <section className="p-2 grid grid-cols-3 gap-8 lg:max-h-[60vh] overflow-x-hidden overflow-y-auto">
+    <section
+      className={
+        "p-2 grid grid-cols-3 gap-8 lg:max-h-[60vh] overflow-x-hidden overflow-y-auto"
+      }
+    >
       {data &&
         data.length > 0 &&
         data.map((item: Record<string, string | boolean>, index: number) => (
